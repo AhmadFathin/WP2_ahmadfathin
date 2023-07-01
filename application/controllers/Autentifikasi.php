@@ -17,9 +17,9 @@ class Autentifikasi extends CI_Controller
         $data['judul'] = 'Login';
         $data['user'] = '';
         //kata 'login' merupakan nilai dari variabel judul dalam array $data dikirimkan ke view aute_header
-        $this->load->view('template/aute_header', $data);
+        $this->load->view('templates/aute_header', $data);
         $this->load->view('autentifikasi/login');
-        $this->load->view('template/aute_footer');
+        $this->load->view('templates/aute_footer');
     } else {
         $this->_login();
     }
@@ -120,9 +120,9 @@ private function _login()
                 //diinput akan disimpan ke dalam tabel user
                 if ($this->form_validation->run() == false) {
                     $data['judul'] = 'Registrasi Member';
-                    $this->load->view('template/aute_header', $data);
+                    $this->load->view('templates/aute_header', $data);
                     $this->load->view('autentifikasi/registrasi');
-                    $this->load->view('template/aute_footer');
+                    $this->load->view('templates/aute_footer');
                 } else {
                     $email = $this->input->post('email', true);
                     $data = [

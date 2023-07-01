@@ -59,11 +59,11 @@ class Buku extends CI_Controller
         $this->load->library('upload', $config);
 
         if ($this->form_validation->run() == false) {
-            $this->load->view('template/header', $data);
-            $this->load->view('template/sidebar', $data);
-            $this->load->view('template/topbar', $data);
+            $this->load->view('templates/header', $data);
+            $this->load->view('templates/sidebar', $data);
+            $this->load->view('templates/topbar', $data);
             $this->load->view('buku/index', $data);
-            $this->load->view('template/footer');
+            $this->load->view('templates/footer');
         } else {
             if ($this->upload->do_upload('image')) {
                 $image = $this->upload->data();
@@ -153,11 +153,11 @@ class Buku extends CI_Controller
         $this->load->library('upload', $config);
 
         if ($this->form_validation->run() == false) {
-            $this->load->view('template/header', $data);
-            $this->load->view('template/sidebar', $data);
-            $this->load->view('template/topbar', $data);
+            $this->load->view('templates/header', $data);
+            $this->load->view('templates/sidebar', $data);
+            $this->load->view('templates/topbar', $data);
             $this->load->view('buku/ubah_buku', $data);
-            $this->load->view('template/footer');
+            $this->load->view('templates/footer');
         } else {
             if ($this->upload->do_upload('image')) {
                 $image = $this->upload->data();
@@ -195,11 +195,11 @@ class Buku extends CI_Controller
         ]);
 
         if ($this->form_validation->run() == false) {
-            $this->load->view('template/header', $data);
-            $this->load->view('template/sidebar', $data);
-            $this->load->view('template/topbar', $data);
+            $this->load->view('templates/header', $data);
+            $this->load->view('templates/sidebar', $data);
+            $this->load->view('templates/topbar', $data);
             $this->load->view('buku/kategori', $data);
-            $this->load->view('template/footer');
+            $this->load->view('templates/footer');
         } else {
             $data = [
                 'kategori' => $this->input->post('kategori', TRUE)
@@ -230,11 +230,11 @@ class Buku extends CI_Controller
         ]);
 
         if ($this->form_validation->run() == false) {
-            $this->load->view('template/header', $data);
-            $this->load->view('template/sidebar', $data);
-            $this->load->view('template/topbar', $data);
+            $this->load->view('templates/header', $data);
+            $this->load->view('templates/sidebar', $data);
+            $this->load->view('templates/topbar', $data);
             $this->load->view('buku/ubah_kategori', $data);
-            $this->load->view('template/footer');
+            $this->load->view('templates/footer');
         } else {
 
             $data = [
